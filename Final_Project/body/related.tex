@@ -1,0 +1,20 @@
+\section{Related Works}
+Besides CWMR, a few other mean-reversion based portfolio selection strategies\cite{UniversalPortfolio, MAFI:MAFI274} have been reported since the idea of mean reversion was first proposed in 1990\cite{mean_reverse}. One of them is the Anticor algorithm introduced by Borodin \emph{et al.} in 2004\cite{AntiCor}.
+
+As we discussed in the previous section, CWMR updates the portfolio for the next trading day by choosing one that has a poor performance today but does not deviate too much from the portfolio used for today. Anticor algorithm has similar characters since it also believes that poor-performing stock is incline to reverse, but it is also very different from CWMR in that Anticor focuses more on the correlations among the stocks.
+
+While CWMR considers the evolution of portfolio as a whole, Anticor applies the mean reversion theory at a much smaller scale, and more specifically, it measures the shift of investment between each pair of stocks every time the portfolio is updated.
+
+The Anticor algorithm evaluates variations in stocks’ performance by dividing a sequence of previous trading days into two periods called windows, with equal length of $w$ days. Anticor tends to transfer investment from stock $i$ to stock $j$ when the following conditions are fulfilled:
+
+1. Stock $i$ had a better performance than stock $j$ over the most recent window.
+
+2. Stock $i$ over the second most recent window is positively correlated with stock $j$ over the most recent window.
+
+3. Both stock $i$ and $j$ are anti-correlated with themselves over consecutive windows.
+
+Figure~\ref{fig:illustration}(b) illustrates a typical case when the investment will be shifted from stock $i$ to $j$. Since the correlation of between stocks $i$ and $j$ in consecutive windows and the anti-correlation of both stocks are supposed to be maintained in the next window, both stocks tend to reverse in the window. Stock $j$, which did not perform well in the most recent window, is predicted to rise in the next window.
+
+For each pair of stocks $i$ and $j$, the extent to which the investment should be shifted from stock $i$ to stock $j$ in the next trading is quantified by $claim_{i\rightarrow j} = M_{cor}(i, j) - M_{cor}(i, i) - M_{cor}(j, j)$ where $M_{cor}(i, j)$ is the correlation between stock $i$ over the second most recent window and stock $j$ over the most recent window, and $M_{cor}(i, i)$ is the correlation between stock $i$ over the second most recent window and itself over the most recent window. Therefore, $claim_{i\rightarrow j}$ will be large if 1) stock $i$ over the second most recent window is positively correlated with stock $j$ over the most recent window and 2) both stock $i$ and $j$ are anti-correlated with themselves over consecutive windows.
+
+As we will show in the Evaluation section, the Anticor algorithm also results in a huge cumulative wealth by constantly transferring investment from the well-performing stock to the anti-correlated poorly-performing stock. The major problem with Anticor is that the return is very sensitive to the window size $w$, the optimal window size may range from 10 days to 50 days depending on which period of time we are interested in.

@@ -1,0 +1,39 @@
+\begin{thebibliography}{1}
+
+\bibitem{AntiCor}
+A.~Borodin, R.~El-Yaniv, and V.~Gogan.
+\newblock Can we learn to beat the best stock.
+\newblock {\em J. Artif. Int. Res.}, 21(1):579--594, May 2004.
+
+\bibitem{UniversalPortfolio}
+T.~M. Cover.
+\newblock Universal portfolios.
+\newblock {\em Mathematical finance}, 1(1):1--29, 1991.
+
+\bibitem{Crammer:2006:OPA:1248547.1248566}
+K.~Crammer, O.~Dekel, J.~Keshet, S.~Shalev-Shwartz, and Y.~Singer.
+\newblock Online passive-aggressive algorithms.
+\newblock {\em J. Mach. Learn. Res.}, 7:551--585, Dec. 2006.
+
+\bibitem{MAFI:MAFI274}
+L.~Györfi, G.~Lugosi, and F.~Udina.
+\newblock Nonparametric kernel-based sequential investment strategies.
+\newblock {\em Mathematical Finance}, 16(2):337--357, 2006.
+
+\bibitem{JOFI:JOFI5110}
+N.~JEGADEESH.
+\newblock Evidence of predictable behavior of security returns.
+\newblock {\em The Journal of Finance}, 45(3):881--898, 1990.
+
+\bibitem{OnlinePortfolio}
+B.~Li, S.~C.~H. Hoi, P.~Zhao, and V.~Gopalkrishnan.
+\newblock Confidence weighted mean reversion strategy for online portfolio
+  selection.
+\newblock {\em ACM Trans. Knowl. Discov. Data}, 7(1):4:1--4:38, Mar. 2013.
+
+\bibitem{mean_reverse}
+A.~W. Lo and A.~C. MacKinlay.
+\newblock When are contrarian profits due to stock market overreaction?
+\newblock {\em Review of Financial Studies}, 3(12):175--205, 1990.
+
+\end{thebibliography}
